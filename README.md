@@ -110,27 +110,27 @@ pnpm add -D @trivago/prettier-plugin-sort-imports
         // 1. 内置 Node 模块（如 fs, path）
         "^node:",
         "<BUILTIN_MODULES>",
-
+  
         // 2. 第三方库（按字母排序）
         "^react",
         "^next",
         "^@?\\w",
-
+  
         // 3. 绝对路径别名（需配合 tsconfig.json 配置）
         "^@/(.*)$",
         "^@core/(.*)$",
         "^@components/(.*)$",
         "^@utils/(.*)$",
-
+  
         // 4. 父目录引用
         "^\\.\\./",
-
+  
         // 5. 当前目录引用
         "^\\./",
-
+  
         // 6. 样式文件（CSS/SCSS）
         "\\.(css|scss|less)$"
-
+  
         // 7. 其他
         "^[./]"
       ],
@@ -188,4 +188,11 @@ pnpm exec husky init
 
 ```cmd
 pnpm add -D vite @vitejs/plugin-react-swc
+```
+
+## 4. Part 4. 框架配置
+
+```cmd
+pnpm add react react-dom
+pnpm add -D @types/react @types/react-dom @types/node
 ```
